@@ -1,0 +1,70 @@
+{
+    "name": "vscode-px2rpx",
+    "displayName": "vscode-px2rpx",
+    "description": "px2rpx",
+    "version": "0.0.1",
+    "publisher": "px2rpx",
+    "engines": {
+        "vscode": "^1.24.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onLanguage:css",
+        "onLanguage:less",
+        "onLanguage:scss",
+        "onLanguage:sass",
+        "onLanguage:wxss"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+      	"commands": [
+            {
+                "command": "extension.px2rpx",
+                "title": "px2rpx"
+            }
+      	],
+      	"keybindings": [
+          	{
+              "command": "extension.px2rpx",
+              "key": "shift+cmd+g"
+          	}
+      	],
+      	"configuration": {
+          "type": "object",
+          "title": "px2rpx 配置",
+          "properties": {
+              "px2rpx.baswWidth": {
+                  "type": "number",
+                  "default": 750,
+                  "description": "base psd view width,default 750"
+              },
+              "px2rpx.fixedDigits": {
+                  "type": "number",
+                  "default": 6,
+                  "description": "px转rpx小数点最大长度，默认：6。"
+              },
+              "px2rpx.autoRemovePrefixZero": {
+                  "type": "boolean",
+                  "default": true,
+                  "description": "自动移除0开头的前缀，默认：true"
+              }
+          }
+      	}
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "tslint": "^5.8.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
