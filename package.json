@@ -2,7 +2,7 @@
     "name": "vscode-px2rpx",
     "displayName": "vscode-px2rpx",
     "description": "px2rpx",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "publisher": "banxidie",
     "engines": {
         "vscode": "^1.24.0"
@@ -10,6 +10,15 @@
     "categories": [
         "Other"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/semi-xi/vscode-px2rpx.git"
+    },
+    "bugs": {
+      "url": "https://github.com/semi-xi/vscode-px2rpx/issues",
+      "email": "lijianjun_cool@163.com"
+    },
+    "icon": "images/icon.png",
     "activationEvents": [
         "onLanguage:css",
         "onLanguage:less",
