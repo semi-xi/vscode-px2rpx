@@ -3,7 +3,7 @@
     "displayName": "vscode-px2rpx",
     "description": "px2rpx",
     "version": "0.0.1",
-    "publisher": "px2rpx",
+    "publisher": "banxidie",
     "engines": {
         "vscode": "^1.24.0"
     },
@@ -28,7 +28,7 @@
       	"keybindings": [
           	{
               "command": "extension.px2rpx",
-              "key": "shift+cmd+g"
+              "key": "cmd+shift+l"
           	}
       	],
       	"configuration": {
